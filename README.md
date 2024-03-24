@@ -1,2 +1,2 @@
 # FlaskSkyNet
-in file app.py fill devices array with your ip addreces and names
+fill the array devices in file app.py with your ip addreces and names
