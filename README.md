@@ -17,9 +17,10 @@ This project aims to provide a simple web interface for checking the status of d
 ## Installation and Usage
 
 1. Clone the repository.
-2. Install python library flask.
-3. Run the Flask server using `python app.py`.
-4. Access the web interface by navigating to the provided URL in your browser.
+2. Install python library flask by cli command pip install Flask.
+3. Open app.py with text editor and replace names and ip adreses in devices array.
+4. Run the Flask server using `python app.py`.
+5. Access the web interface by navigating to the provided URL in your browser.
 
 ## Technologies Used
 
