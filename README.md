@@ -2,7 +2,7 @@
 # Network Device Checker
 ## Purpose
 
-This project was created to enable users to add a link to the home screen of their iOS device and use it as a standalone application rather than within a browser. By accessing the web interface through this link, users can conveniently check the status of devices on their local network from their iOS device with ease.
+This project was created to enable users to add a link to the home screen of their iOS device and use it as a standalone application rather than within a browser.
 
 This project aims to provide a simple web interface for checking the status of devices on a local network. It allows users to quickly identify which devices are online and operational, and which ones may require further attention from the network administrator.
 
