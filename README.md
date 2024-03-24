@@ -14,7 +14,7 @@ This project aims to provide a simple web interface for checking the status of d
 ## Installation and Usage
 
 1. Clone the repository.
-2. Install the necessary dependencies using `pip install -r requirements.txt`.
+2. Install python library flask.
 3. Run the Flask server using `python app.py`.
 4. Access the web interface by navigating to the provided URL in your browser.
 
