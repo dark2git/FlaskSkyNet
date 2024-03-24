@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <link rel="stylesheet" href='/static/styles.css'>
+    <link rel="stylesheet" href="/static/nav.css">
+    <link rel="manifest" href="/static/manifest.json">
+    <title>SkyNet</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#f2f2f2">
+    <meta name="theme-color" content="#f2f2f2">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <div class="scroll-container snaps">
+        <div id="section1" class="scroll-area first">
+            <div class="original-button" onclick="checkDevices(); scrollToSection('section2')">Scan</div>
+            <nav> 
+                <ul class="nav-list">
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link">Language</a>
+                        <ul class="sub-list">
+                            <li class="sub-list__item">
+                                <a href="#" class="sub-list__link" onclick="changeLanguage('uk')">Українська</a>
+                            </li>
+                            <li class="sub-list__item">
+                                <a href="#" class="sub-list__link" onclick="changeLanguage('pl')">Polski</a>
+                            </li>
+                            <li class="sub-list__item">
+                                <a href="#" class="sub-list__link" onclick="changeLanguage('en')">English</a>
+                            </li>
+                        </ul>
+                </ul>
+            </nav>
+        </div>
+        <div id="section2" class="scroll-area second">
+            <div class="header">
+                <div class="back" onclick="scrollToSection('section1')"></div>
+                <div id="output" class="top">Results</div>
+            </div>
+            <div class="report">
+                <div class="loader"></div>
+                <div class="results" id="deviceStatus"></div>
+            </div>
+            <div class="footer">
+                <button class="skanirung" id="rescan" onclick="checkDevices()">↺</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

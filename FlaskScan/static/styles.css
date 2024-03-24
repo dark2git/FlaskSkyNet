@@ -1,0 +1,261 @@
+:root {
+    --main-bg-color: rgb(0, 0, 0);
+    --scroll-container-color: #f2f2f2;
+    --scroll-container-heigh: 100svh;
+    --scroll-area-color: #f2f2f2;
+    --online-color: black;
+    --offline-color: red;
+    --border-button-color: 2px solid #000000;
+    --button-text-color: #000000;
+    --button-bg-color: #B0C4DE;
+    --button-border-radius: 8px;
+    --button-box-shadow: 5px 5px 0px 0px #a7bbd5;
+    --button-box-shadow-hoover: 5px 5px 0px 1px rgb(60, 60, 60);
+    --button-text-color-hoover: #fff; 
+    --button-bg-color-hoover: #000000;
+    --button-box-shadow-active: 0 0 rgb(60, 60, 60);
+    --lang-bg: #B0C4DE;
+    --back-btn: solid 3px #007aff;
+}
+
+html {
+    background-color: var(--main-bg-color);
+    overflow: hidden; /* kill overscroll */
+
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-container{
+    height: var(--scroll-container-heigh);
+    background-color: var(--scroll-container-color);
+    width: 100vw;
+    display: grid;
+    gap: 0.5rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;   /* avid overscrolling */
+    -ms-overflow-style: none;  /* kill bar for IE and Edge */
+    scrollbar-width: none;  /* kill bar for Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.snaps {
+    scroll-snap-type: inline mandatory;
+}
+
+.snaps > * {
+    scroll-snap-align: end;
+}
+
+.scroll-area {
+    background-color: var(--scroll-area-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-area > div {
+    font-size: 1.25rem;
+}
+
+.scroll-area > .original-button {
+    font-size: 1.5rem;
+}
+
+.scroll-area > div > .top {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.first {
+    position: relative;
+}
+
+.language {
+    position: absolute;
+    bottom: 0;
+}
+
+
+.online::before {
+    content: "✔️ ";
+}
+
+.online {
+    color: var(--online-color);
+}
+
+.offline::before {
+    content: "❌ ";
+}
+
+.offline {
+    color: var(--offline-color);
+}
+
+.original-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--button-text-color);
+  font-size: 18px;
+  border-radius: var(--button-border-radius);
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  border: var(--border-button-color);
+  transition: 0.3s;
+  box-shadow: var(--button-box-shadow);
+  background-color: var(--button-bg-color);
+}
+
+.original-button:hover {
+    box-shadow: var(--button-box-shadow-hoover);
+    color: var(--button-text-color-hoover);
+    background-color: var(--button-bg-color-hoover);
+}
+
+.original-button:active {
+    box-shadow: var(--button-box-shadow-active);
+}
+
+.second {
+    position: relative;
+}
+
+
+.header, 
+.footer {
+    height: 66px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    background-image: linear-gradient(to top, rgba(242, 242, 242, 0.95), rgba(242, 242, 242, 1));
+}
+
+.results {
+    height: 80svh;
+    overflow-y: auto; 
+    padding: 10px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, rgba(242, 242, 242, 0.95), rgba(242, 242, 242, 1));
+}
+
+.report {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top {
+    position: relative;
+    left: -5px
+}
+
+.back {
+    height: 15px;
+    width: 15px;
+    transform: rotate(-45deg);
+    position: absolute;
+    border-top: var(--back-btn);
+    border-left: var(--back-btn);
+    left: 21px;
+    top: 21px;
+}
+
+.footer > .skanirung {
+    font-size: 1rem;
+}
+
+.skanirung {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: var(--button-text-color);
+    font-size: 18px;
+    border-radius: var(--button-border-radius);
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    border: var(--border-button-color);
+    transition: 0.3s;
+    box-shadow: var(--button-box-shadow);
+    background-color: var(--button-bg-color);
+    position: absolute;
+    top: 5px;
+  }
+  
+  .skanirung:hover {
+      box-shadow: var(--button-box-shadow-hoover);
+      color: var(--button-text-color-hoover);
+      background-color: var(--button-bg-color-hoover);
+  }
+  
+  .skanirung:active {
+      box-shadow: var(--button-box-shadow-active);
+  }
+
+  .loader {
+    width: 200px;
+    height: 200px;
+    display: none;
+    position: relative;
+    left: 10px;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--button-bg-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    animation: animloader 2s ease-in-out infinite;
+  }
+  .loader::after {
+    animation-delay: 1s;
+  }
+
+@keyframes animloader {
+    0%, 100% {
+      transform: scale(0);
+      opacity: 1;
+}
+    50% {
+      transform: scale(1);
+      opacity: 0;
+}
+  }
